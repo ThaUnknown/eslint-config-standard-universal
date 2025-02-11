@@ -1,0 +1,44 @@
+name: Validate ESLint Config
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+      
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      
+      - name: Validate passing file
+        run: |
+          echo "Testing file that should pass:"
+          if ! pnpm run test-pass; then
+            echo "❌ ESLint found errors in file that should pass"
+            exit 1
+          fi
+          echo "✅ Passing file validated successfully"
+      
+      - name: Validate failing file
+        run: |
+          echo "Testing file that should fail:"
+          if pnpm run test-fail; then
+            echo "❌ ESLint didn't find errors in file that should fail"
+            exit 1
+          fi
+          echo "✅ Failing file validated successfully"
+
+permissions:
+  contents: read
+  pull-requests: read

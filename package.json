@@ -16,5 +16,9 @@
 		"svelte": "^5.14.0",
 		"typescript": "^5.7.2",
 		"typescript-eslint": "^8.18.0"
+	},
+	"scripts": {
+		"test-fail": "eslint -c ./test/config.js ./test/fail.ts",
+		"test-pass": "eslint -c ./test/config.js ./test/pass.js"
 	}
 }

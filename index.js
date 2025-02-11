@@ -7,25 +7,25 @@ import n from 'eslint-plugin-n'
 import promise from 'eslint-plugin-promise'
 
 /**
- * @param {import('eslint').ESLint.Environment['globals']} globals 
+ * @param {import('eslint').ESLint.Environment['globals']} globals
  */
 export default function (globals = {
   ..._globals.browser,
   ..._globals.worker,
   ..._globals.serviceworker
-}) { 
+}) {
   return tseslint.config(
     ...tseslint.configs.recommended,
     ...svelte.configs['flat/recommended'],
     {
-      files: ['src/**/*.svelte', 'src/**/*.ts', 'src/**/*.js'],
+      files: ['**/*.svelte', '**/*.ts', '**/*.js', '**/*.tsx', '**/*.jsx'],
       languageOptions: {
         globals,
         parserOptions: {
           projectService: {
-            allowDefaultProject: ['*.svelte', '*.ts', '*.js']
+            allowDefaultProject: ['*.svelte', '*.ts', '*.js', '*.tsx', '*.jsx']
           },
-          extraFileExtensions: ['.svelte'],
+          extraFileExtensions: ['*.svelte', '*.ts', '*.js', '*.tsx', '*.jsx'],
           parser: tseslint.parser
         }
       },
