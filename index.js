@@ -25,7 +25,7 @@ export default function (globals = {
           projectService: {
             allowDefaultProject: ['*.svelte', '*.ts', '*.js', '*.tsx', '*.jsx']
           },
-          extraFileExtensions: ['*.svelte', '*.ts', '*.js', '*.tsx', '*.jsx'],
+          extraFileExtensions: ['.svelte'],
           parser: tseslint.parser
         }
       },
