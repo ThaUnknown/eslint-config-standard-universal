@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-standard-universal",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "ESLint configuration for Standard, works universally with JavaScript, TypeScript, Svelte, and more. For browsers, Node.js, and Deno.",
 	"type": "module",
 	"main": "index.js",

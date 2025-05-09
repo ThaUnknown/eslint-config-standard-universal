@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "esnext",
+    "lib": [
+      "esnext",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "allowJs": true,
+    "checkJs": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    "emitDeclarationOnly": false,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "noUncheckedIndexedAccess": true,
+    "declaration": true,
+    "alwaysStrict": true,
+    "strict": true,
+    "maxNodeModuleJsDepth": 3,
+    "allowSyntheticDefaultImports": true
+  },
+  "typeAcquisition": {
+    "enable": false
+  }
+}
