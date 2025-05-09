@@ -18,12 +18,12 @@ export default function (globals = {
     ...tseslint.configs.recommended,
     ...svelte.configs['flat/recommended'],
     {
-      files: ['**/*.svelte', '**/*.ts', '**/*.js', '**/*.tsx', '**/*.jsx'],
+      files: ['**/*.svelte', '**/*.ts', '**/*.js', '**/*.tsx', '**/*.jsx', '**/*.mjs', '**/*.cjs', '**/*.cts', '**/*.mts'],
       languageOptions: {
         globals,
         parserOptions: {
           projectService: {
-            allowDefaultProject: ['*.svelte', '*.ts', '*.js', '*.tsx', '*.jsx']
+            allowDefaultProject: ['**/*.svelte', '**/*.ts', '**/*.js', '**/*.tsx', '**/*.jsx', '**/*.mjs', '**/*.cjs', '**/*.cts', '**/*.mts']
           },
           extraFileExtensions: ['.svelte'],
           parser: tseslint.parser
@@ -129,12 +129,7 @@ export default function (globals = {
           'error',
           'property'
         ],
-        'dot-notation': [
-          'error',
-          {
-            allowKeywords: true
-          }
-        ],
+        'dot-notation': 'off',
         'eol-last': 'error',
         eqeqeq: [
           'error',
@@ -234,7 +229,7 @@ export default function (globals = {
           }
         ],
         'new-parens': 'error',
-        'no-array-constructor': 'error',
+        'no-array-constructor': 'off',
         'no-async-promise-executor': 'error',
         'no-caller': 'error',
         'no-case-declarations': 'error',
@@ -252,7 +247,7 @@ export default function (globals = {
         'no-debugger': 'error',
         'no-delete-var': 'error',
         'no-dupe-args': 'error',
-        'no-dupe-class-members': 'error',
+        'no-dupe-class-members': 'off',
         'no-dupe-keys': 'error',
         'no-duplicate-case': 'error',
         'no-useless-backreference': 'error',
@@ -277,7 +272,7 @@ export default function (globals = {
         'no-floating-decimal': 'error',
         'no-func-assign': 'error',
         'no-global-assign': 'error',
-        'no-implied-eval': 'error',
+        'no-implied-eval': 'off',
         'no-import-assign': 'error',
         'no-invalid-regexp': 'error',
         'no-irregular-whitespace': 'error',
@@ -340,12 +335,7 @@ export default function (globals = {
         'no-octal': 'error',
         'no-octal-escape': 'error',
         'no-proto': 'error',
-        'no-redeclare': [
-          'error',
-          {
-            builtinGlobals: false
-          }
-        ],
+        'no-redeclare': 'off',
         'no-regex-spaces': 'error',
         'no-return-assign': [
           'error',
@@ -367,7 +357,7 @@ export default function (globals = {
         'no-throw-literal': 'error',
         'no-trailing-spaces': 'error',
         'no-undef': 'error',
-        'no-undef-init': 'error',
+        'no-undef-init': 'off',
         'no-unexpected-multiline': 'error',
         'no-unmodified-loop-condition': 'error',
         'no-unneeded-ternary': [
@@ -380,34 +370,12 @@ export default function (globals = {
         'no-unreachable-loop': 'error',
         'no-unsafe-finally': 'error',
         'no-unsafe-negation': 'error',
-        'no-unused-expressions': [
-          'error',
-          {
-            allowShortCircuit: true,
-            allowTernary: true,
-            allowTaggedTemplates: true
-          }
-        ],
-        'no-unused-vars': [
-          'error',
-          {
-            args: 'none',
-            caughtErrors: 'none',
-            ignoreRestSiblings: true,
-            vars: 'all'
-          }
-        ],
-        'no-use-before-define': [
-          'error',
-          {
-            functions: false,
-            classes: false,
-            variables: false
-          }
-        ],
+        'no-unused-expressions': 'off',
+        'no-unused-vars': 'off',
+        'no-use-before-define': 'off',
         'no-useless-call': 'error',
         'no-useless-computed-key': 'error',
-        'no-useless-constructor': 'error',
+        'no-useless-constructor': 'off',
         'no-useless-escape': 'error',
         'no-useless-rename': 'error',
         'no-useless-return': 'error',
@@ -462,7 +430,7 @@ export default function (globals = {
             destructuring: 'all'
           }
         ],
-        'prefer-promise-reject-errors': 'error',
+        'prefer-promise-reject-errors': 'off',
         'prefer-regex-literals': [
           'error',
           {
@@ -588,6 +556,11 @@ export default function (globals = {
         ],
         'import/export': 'error',
         'import/first': 'error',
+        'import/order': ['error', {
+          'newlines-between': 'always',
+          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'type'],
+          alphabetize: { order: 'asc' }
+        }],
         'import/no-absolute-path': [
           'error',
           {
@@ -613,7 +586,8 @@ export default function (globals = {
         'svelte/indent': ['error', { indent: 2, indentScript: true }],
         'svelte/require-each-key': 'error',
         'a11y-media-has-caption': 'off',
-        'svelte/html-self-closing': ['error', 'always'],
+        'svelte/html-self-closing': ['error', 'all'],
+        'svelte/no-reactive-reassign': 'off',
         'svelte/html-closing-bracket-spacing': ['error', {
           startTag: 'never',
           endTag: 'never',
@@ -745,12 +719,7 @@ export default function (globals = {
             allowProtectedClassPropertyAccess: false
           }
         ],
-        '@typescript-eslint/max-params': [
-          'error',
-          {
-            max: 4
-          }
-        ],
+        '@typescript-eslint/max-params': 'off',
         '@typescript-eslint/method-signature-style': 'error',
         '@typescript-eslint/naming-convention': [
           'error',
@@ -791,12 +760,7 @@ export default function (globals = {
         '@typescript-eslint/no-dynamic-delete': [
           'error'
         ],
-        '@typescript-eslint/no-empty-function': [
-          'error',
-          {
-            allow: []
-          }
-        ],
+        '@typescript-eslint/no-empty-function': 'off',
         '@typescript-eslint/no-empty-object-type': [
           'error',
           {
@@ -886,7 +850,7 @@ export default function (globals = {
         ],
         '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
         '@typescript-eslint/no-unnecessary-condition': [
-          'error',
+          'warn',
           {
             allowConstantLoopConditions: true
           }
@@ -1039,6 +1003,18 @@ export default function (globals = {
             ignoreStatic: false
           }
         ]
+      }
+    },
+    {
+      files: ['**/*.svelte'],
+      rules: {
+        '@typescript-eslint/no-unused-vars': ['error', {
+          varsIgnorePattern: '.{2}(Events|Props)',
+          args: 'none',
+          caughtErrors: 'none',
+          ignoreRestSiblings: true,
+          vars: 'all'
+        }]
       }
     },
     {
