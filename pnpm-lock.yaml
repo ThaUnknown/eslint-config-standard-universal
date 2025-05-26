@@ -28,13 +28,13 @@ importers:
         version: 7.2.1(eslint@9.27.0)
       eslint-plugin-svelte:
         specifier: ^3.0.2
-        version: 3.8.1(eslint@9.27.0)(svelte@5.31.1)
+        version: 3.8.1(eslint@9.27.0)(svelte@5.33.2)
       globals:
         specifier: ^16.0.0
         version: 16.2.0
       svelte:
-        specifier: 5.31.1
-        version: 5.31.1
+        specifier: 5.33.2
+        version: 5.33.2
       typescript:
         specifier: ^5.7.2
         version: 5.8.3
@@ -1105,8 +1105,8 @@ packages:
       svelte:
         optional: true
 
-  svelte@5.31.1:
-    resolution: {integrity: sha512-09fup3U7NQobUCUJnLhed6pxG6MzUS8rPsALB5Jr8m8u3pVKITs0ejYiKS/wsVjfkXHvKc2g260KA8o7dWypHA==}
+  svelte@5.33.2:
+    resolution: {integrity: sha512-uiyusx2rUa9NmVMaIcShnZyDhOfFXxgkn5eXOcgjDBL3RYQGR1+7TctPcI6AWNbu4gHWF5xZ/TlFM7nnw5H+JQ==}
     engines: {node: '>=18'}
 
   tapable@2.2.1:
@@ -1760,7 +1760,7 @@ snapshots:
       '@eslint-community/eslint-utils': 4.4.1(eslint@9.27.0)
       eslint: 9.27.0
 
-  eslint-plugin-svelte@3.8.1(eslint@9.27.0)(svelte@5.31.1):
+  eslint-plugin-svelte@3.8.1(eslint@9.27.0)(svelte@5.33.2):
     dependencies:
       '@eslint-community/eslint-utils': 4.7.0(eslint@9.27.0)
       '@jridgewell/sourcemap-codec': 1.5.0
@@ -1772,9 +1772,9 @@ snapshots:
       postcss-load-config: 3.1.4(postcss@8.5.3)
       postcss-safe-parser: 7.0.1(postcss@8.5.3)
       semver: 7.7.2
-      svelte-eslint-parser: 1.2.0(svelte@5.31.1)
+      svelte-eslint-parser: 1.2.0(svelte@5.33.2)
     optionalDependencies:
-      svelte: 5.31.1
+      svelte: 5.33.2
     transitivePeerDependencies:
       - ts-node
 
@@ -2418,7 +2418,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-eslint-parser@1.2.0(svelte@5.31.1):
+  svelte-eslint-parser@1.2.0(svelte@5.33.2):
     dependencies:
       eslint-scope: 8.3.0
       eslint-visitor-keys: 4.2.0
@@ -2427,9 +2427,9 @@ snapshots:
       postcss-scss: 4.0.9(postcss@8.5.3)
       postcss-selector-parser: 7.1.0
     optionalDependencies:
-      svelte: 5.31.1
+      svelte: 5.33.2
 
-  svelte@5.31.1:
+  svelte@5.33.2:
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@jridgewell/sourcemap-codec': 1.5.0
