@@ -607,6 +607,13 @@ export default function (globals = {
         ],
         'svelte/shorthand-attribute': ['warn', { prefer: 'always' }],
         'svelte/spaced-html-comment': ['error', 'always'],
+        'svelte/no-useless-mustaches': [
+          'error',
+          {
+            ignoreIncludesComment: false,
+            ignoreStringEscape: true
+          }
+        ],
         '@stylistic/semi': ['error', 'never'],
         '@stylistic/ts/type-annotation-spacing': 'error',
         '@stylistic/js/no-extra-semi': 'error',

@@ -14,6 +14,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,
+    "outDir": "./dist",
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "rewriteRelativeImportExtensions": true,
