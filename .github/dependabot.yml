@@ -9,6 +9,6 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
-ignore:
-  - dependency-name: "svelte"
-    versions: [ ">=4.2.19" ]
+    ignore:
+      - dependency-name: "svelte"
+        versions: [ ">=4.2.19" ]
