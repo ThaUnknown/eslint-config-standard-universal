@@ -28,7 +28,7 @@ importers:
         version: 7.2.1(eslint@9.34.0)
       eslint-plugin-svelte:
         specifier: ^3.0.2
-        version: 3.11.0(eslint@9.34.0)(svelte@4.2.19)
+        version: 3.12.2(eslint@9.34.0)(svelte@4.2.19)
       globals:
         specifier: ^16.0.0
         version: 16.3.0
@@ -133,8 +133,8 @@ packages:
   '@jridgewell/sourcemap-codec@1.5.0':
     resolution: {integrity: sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==}
 
-  '@jridgewell/sourcemap-codec@1.5.4':
-    resolution: {integrity: sha512-VT2+G1VQs/9oz078bLrYbecdZKs912zQlkelYpuf+SXF+QvZDYJlbx/LSx+meSAwdDFnF8FVXW92AVjjkVmgFw==}
+  '@jridgewell/sourcemap-codec@1.5.5':
+    resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
@@ -497,8 +497,8 @@ packages:
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
 
-  eslint-plugin-svelte@3.11.0:
-    resolution: {integrity: sha512-KliWlkieHyEa65aQIkRwUFfHzT5Cn4u3BQQsu3KlkJOs7c1u7ryn84EWaOjEzilbKgttT4OfBURA8Uc4JBSQIw==}
+  eslint-plugin-svelte@3.12.2:
+    resolution: {integrity: sha512-NDYltSWcDybvnXD5P3NtrLAfdrgr2lklZsXpyIoSlQfg2d80p/E853XXccu+uVn+w4+Q/iHy4oRw00GJH9I/Cg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: ^8.57.1 || ^9.0.0
@@ -1324,7 +1324,7 @@ snapshots:
 
   '@jridgewell/sourcemap-codec@1.5.0': {}
 
-  '@jridgewell/sourcemap-codec@1.5.4': {}
+  '@jridgewell/sourcemap-codec@1.5.5': {}
 
   '@jridgewell/trace-mapping@0.3.25':
     dependencies:
@@ -1823,10 +1823,10 @@ snapshots:
       '@eslint-community/eslint-utils': 4.4.1(eslint@9.34.0)
       eslint: 9.34.0
 
-  eslint-plugin-svelte@3.11.0(eslint@9.34.0)(svelte@4.2.19):
+  eslint-plugin-svelte@3.12.2(eslint@9.34.0)(svelte@4.2.19):
     dependencies:
-      '@eslint-community/eslint-utils': 4.7.0(eslint@9.34.0)
-      '@jridgewell/sourcemap-codec': 1.5.4
+      '@eslint-community/eslint-utils': 4.9.0(eslint@9.34.0)
+      '@jridgewell/sourcemap-codec': 1.5.5
       eslint: 9.34.0
       esutils: 2.0.3
       globals: 16.3.0
